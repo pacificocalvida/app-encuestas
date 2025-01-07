@@ -1,0 +1,30 @@
+<div class="d-flex justify-content-center align-items-center vh-100" *ngIf="!idEncuestaValida">
+    <div class="mx-custom">
+        <img src="./../../assets/img/404.webp" alt="not found" class="img-fluid">
+        <h4 class="text-center text-secondary">Encuesta no encontrada</h4>
+    </div>
+</div>
+
+<div class="d-flex justify-content-center align-items-center vh-100" *ngIf="encuestaEnviada">
+    <div class="mx-custom">
+        <img src="./../../assets/img/encuesta-enviada.png" alt="Encuesta enviada" class="img-fluid">
+        <h4 class="text-center text-secondary">Ya respondiste esta encuesta. Gracias.</h4>
+    </div>
+</div>
+
+<div class="d-flex justify-content-center align-items-center vh-100" *ngIf="!encuesta.estado">
+    <div class="mx-custom">
+        <img src="https://st3.depositphotos.com/1269954/14134/v/450/depositphotos_141345378-stock-illustration-inactive-rubber-stamp.jpg" 
+        width="90%"
+        alt="Encuesta enviada" class="img-fluid">
+        <h4 class="text-center text-secondary">La encuesta ya no se encuentra activa</h4>
+    </div>
+</div>
+
+<ng-container  *ngIf="!encuestaEnviada && encuesta.estado">
+    <ng-content></ng-content>
+</ng-container>
+
+<footer class="py-3 my-4" style="font-size: xx-small;">
+    <p class="text-center text-muted">Developed by Champion Chapter Core y Periféricos Vida {{anio}}.</p>
+</footer>

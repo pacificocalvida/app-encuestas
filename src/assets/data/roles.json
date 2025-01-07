@@ -1,0 +1,6 @@
+[
+    { "nombre": "Chapter Leader", "id": "CL" },
+    { "nombre": "Product Owner", "id": "PO" },
+    { "nombre": "Focal Point", "id": "FP" },
+    { "nombre": "Agile Coach", "id": "AC" }
+]
